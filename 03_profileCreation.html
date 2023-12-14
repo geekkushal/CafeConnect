@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>uConnect - Create your profile</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset default browser styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Global Styles */
+      body {
+        font-family: "Montserrat", Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background: linear-gradient(to right, #f5f5f5, #f47591);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding-top: 70px;
+        transition: all 0.25s linear;
+      }
+
+      /* Header Styles */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #f47591;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      /* Logo Styles */
+      .logo {
+        height: 40px;
+        margin-left: 20px;
+      }
+
+      .container {
+        background-color: #fff;
+        width: 80%;
+        max-width: 500px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 180px; 
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        margin: 15px 0 5px;
+        color: #333;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      #photo {
+        margin-bottom: 20px; 
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        padding: 1rem 2rem;
+        background: linear-gradient(to right, #ff4081, #f47591);
+        color: #fff;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background: linear-gradient(to right, #f47591, #ff4081);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/01_landingPage.html"
+        ><img
+          src="/img/Screenshot_2023-11-11_210535-removebg-preview.png"
+          alt="Logo"
+          class="logo"
+      /></a>
+    </header>
+    <div class="container">
+      <h1>Create Your Profile</h1>
+      <form id="profile-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required />
+
+        <label for="bio">Short Bio</label>
+        <textarea id="bio" name="bio" required></textarea>
+
+        <label for="interests">Interests</label>
+        <input type="text" id="interests" name="interests" required />
+
+        <label for="photo">Upload Profile Photo</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required />
+
+        <button type="submit">Create Profile</button>
+      </form>
+    </div>
+  </body>
+</html>
